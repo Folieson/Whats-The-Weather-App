@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Whats_The_Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ross-van-der-wal-224857-unsplash.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="DlO-lc-A0E">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's The Weather?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWW-Xc-H6a">
+                                <rect key="frame" x="49" y="50" width="277.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your city:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bM2-L2-0IK">
+                                <rect key="frame" x="123.5" y="116" width="128" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. London, San Francisco" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iY4-Ol-i4N">
+                                <rect key="frame" x="16" y="159" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="address-level2"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="6YW-xr-VbY"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNY-Ja-bdb">
+                                <rect key="frame" x="156.5" y="209" width="62" height="36"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KcQ-Bl-pWF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqw-hd-ieN">
+                                <rect key="frame" x="16" y="334" width="343" height="0.0"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DlO-lc-A0E" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7pC-d6-LjL"/>
+                            <constraint firstItem="iY4-Ol-i4N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9ts-Zc-QGO"/>
+                            <constraint firstItem="Lqw-hd-ieN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AUE-J8-edP"/>
+                            <constraint firstItem="RNY-Ja-bdb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CAu-XS-TGX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iY4-Ol-i4N" secondAttribute="trailing" constant="16" id="CLA-vW-pUU"/>
+                            <constraint firstItem="Lqw-hd-ieN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="F4Z-wb-18o"/>
+                            <constraint firstItem="DlO-lc-A0E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FFj-ct-JeR"/>
+                            <constraint firstItem="kWW-Xc-H6a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aAl-3n-2O1"/>
+                            <constraint firstItem="iY4-Ol-i4N" firstAttribute="top" secondItem="bM2-L2-0IK" secondAttribute="bottom" constant="20" id="eHs-5B-EFS"/>
+                            <constraint firstItem="kWW-Xc-H6a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="gVT-mL-GbC"/>
+                            <constraint firstItem="bM2-L2-0IK" firstAttribute="top" secondItem="kWW-Xc-H6a" secondAttribute="bottom" constant="30" id="ihu-kw-yzf"/>
+                            <constraint firstItem="RNY-Ja-bdb" firstAttribute="top" secondItem="iY4-Ol-i4N" secondAttribute="bottom" constant="20" id="kPh-xH-svn"/>
+                            <constraint firstItem="bM2-L2-0IK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mkG-81-hlS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lqw-hd-ieN" secondAttribute="trailing" constant="16" id="o1S-Jm-jdX"/>
+                            <constraint firstItem="DlO-lc-A0E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pZb-Xt-BCi"/>
+                            <constraint firstItem="DlO-lc-A0E" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rGe-ST-bbG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityNameTextField" destination="iY4-Ol-i4N" id="GDI-Nw-yr8"/>
+                        <outlet property="weatherLabel" destination="Lqw-hd-ieN" id="0Lm-EF-FHT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ross-van-der-wal-224857-unsplash.jpg" width="3457" height="5186"/>
+    </resources>
+</document>
